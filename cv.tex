@@ -1,85 +1,156 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\documentclass[11pt,a4paper,sans]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
+%
+% Simple asymmetric two-column CV 
+% Author: Sofia JIJON
+%
 
-\moderncvstyle{casual} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
-\moderncvcolor{blue} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+\documentclass[a4paper,10pt]{article}
+\usepackage[vmargin=1.5cm, hmargin=1.2cm]{geometry}
+\input{MySetup}
+%-------------------------------------------------------------------------------------------------------
 
-\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
-\usepackage{multicol}
-\usepackage[english]{babel}
-\usepackage[utf8]{inputenc}
-
-\usepackage[scale=0.75]{geometry} % Reduce document margins
-%\setlength{\hintscolumnwidth}{3cm} % Uncomment to change the width of the dates column
-%\setlength{\makecvtitlenamewidth}{10cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
-
-%----------------------------------------------------------------------------------------
-%	NAME AND CONTACT INFORMATION SECTION
-%----------------------------------------------------------------------------------------
-
-\firstname{Elena} % Your first name
-\familyname{Acinapura} % Your last name
-% All information in this block is optional, comment out any lines you don't need
-%\title{}
-% \address{}
-% \mobile{}
-% \email{}
-\photo[120pt][0pt]{propic} % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
-%\quote{"To work in a firm with a professional work driven environment where I can utilize and apply my knowledge."}
-
-%----------------------------------------------------------------------------------------
 \begin{document}
 \thispagestyle{empty}
 
-\makecvtitle % Print the CV title
+%-------------------------------------------------------------------------------------------------------
+% Left column
+%-------------------------------------------------------------------------------------------------------
+\begin{adjustbox}{valign=t}
+\begin{minipage}{0.3\textwidth} % Adapt width to your convenience
+%----------------------------------------------------
+% Please add a photo in 1x1 format
+\begin{center}
+\begin{tikzpicture}
+	\clip (0,0) circle (2cm) node {\includegraphics[width=4cm]{propic}};
+\end{tikzpicture}
 
-\section{Personal information}
-\cvitem{}{Elena Acinapura}
-\cvitem{Born in}{Bolzano, Italy, 1999}%on 13\textsuperscript{th} November 1999}
-% \cvitem{Resident in}{Via Gaismair 2, Bolzano, Italy}
-% \cvitem{Telephone}{+39 3382025637}
-% \cvitem{Email}{\href{mailto:elena.acinapura@gmail.com}{elena.acinapura@gmail.com}}
-\cvitem{Website}{\url{elena.acinapura.it}}
-\cvitem{LinkedIn}
-{\raisebox{-.5ex}{\includegraphics[width=0.5cm]{linkedin.png}} \url{linkedin.com/in/elena-acinapura}}
+\MySkip 	% See MySetup.tex file
 
-\section{Education}
-% \cventry{September 2021} {Master in Quantum Engineering}{}{ · ETH Zürich}{}{}
-\cventry{2018 - 2021}{Bachelor in Physics}{}{ · University of Trento}{}{Graduated with 110/110 cum laude}
-\cventry{2013 - 2018}{Secondary School}{}{ · Liceo Classico \textit{"G. Carducci"}, Bolzano}{}{Graduated with 100/100 cum laude}
+%----------------------------------------------------
+{\LARGE \bfseries Elena Acinapura}
 
-\section{Working Experience}
-\cventry{Jul 2021 - Nov 2021}{Technical consultant}{ · Kerr s.r.l.}{}{}{Development of the front-end electronics for a single-photons detector}
-\cventry{Feb 2021 - Jun 2021}{Physics Tutor}{ · University of Trento}{}{}{Tutor for the Physics course at the department of Industrial Engineering, University of Trento}
-% \cventry{August 2019}{Internship at Witted Srl.}{ · Witted, Rovereto (TN)}{}{ · Summer industrial internship}{Design of methods to measure the spectrum of water waves using buoyant equipment}
+\MySkip 	% See MySetup.tex file
 
+Born in Bolzano, Italy, 1999
+Currently living in Zürich\\
 
-\section{Technical Skills}
-Aside from the scientific knowledge provided me by my Physics studies, I also have the following technical skills: \\
-\cvlistitem{\textbf{C/C++} - Very solid knowledge; used extensively for computational physics and algorithms. Ability of building and linking complex libraries.}
-\cvlistitem{\textbf{Python} - Very good knowledge; used extensively for scientific analysis and personal projects.}
-\cvlistitem{\textbf{Git} - Extensive and every-day use of Git for version control of personal and shared projects.}
-\cvlistitem{\textbf{CMake} - Good skills in building structured  project in C/C++. Used in scientific and personal projects.}
-\cvlistitem{\LaTeX - Very good knowledge, used extensively}
-\cvlistitem{\textbf{MATLAB} - Good knowledge of its language and environment. Used occasionally.}
-\cvlistitem{\textbf{Linux} - Long-time Linux user.}
+\MySkip 	% See MySetup.tex file
 
-\section{Futher Experiences}
-\cventry{March 2021}{SWERC}{}{ · I participated in the SWERC competition of competitive programming as a student selected from the University of Trento}{}{}
-\cventry{November 2020}{Member of the Department Council}{}{ · I have been elected member of the Physics Department Council at Trento University, in representation of the physics students}{}{}
-\cventry{February 2020}{Google Hash Code}{ (Qualification Round)}{ · I participated in the first round of the Google Hash Code, with my team ranking 3\textsuperscript{rd} in my hub (University of Trento), which was the second biggest hub in the competition}{}{}
-% \cventry{2016-2018}{Land Education Committee}{ (Consiglio Scolastico Provinciale)}{ · I have been elected memeber of the Education Committee of the Province of Bolzano/Bozen, in representation of the italian-mothertongue students of Province. The Committee is involved in the process of writing legislation about education in the Province of Bolzano}{}{}
+\textcolor{ColorTwo}{\faEnvelopeO} 
+\myhref{mailto:elena.acinapura@gmail.com}{elena.acinapura@gmail.com} \\
 
-\section{Languages}
-\cvitemwithcomment{Italian}{Mothertongue}{}
-\cvitemwithcomment{English}{C1 - Advanced}{Certificate of Advanced English (CAE) passed with C2 level\\IELTS -- score 8}
-\cvitemwithcomment{German}{C1 - Advanced}{C1 level at Test DaF \\ Certificate of bilingualism of the Province of Bolzano: Level A}
+\textcolor{ColorTwo}{\faChain} 
+\myhref{https://elena.acinapura.it}{elena.acinapura.it}
+\end{center}
 
-\section{}
-\cvitem{}{I hereby consent to the processing of the personal data in this document under the
-EU Regulation 2016/679 (General Data Protection Regulation) for the sole purpose of
-consideration of my skills and experience for academic or professional opportunities.}
-\vspace{1cm}
-Last update: October 2021
+\vfill
 
+%----------------------------------------------------
+\section*{Scientific interests}
+\raggedright
+\textcolor{ColorOne}{$\circ$} Quantum computing\\
+\textcolor{ColorOne}{$\circ$} Quantum sensing\\
+\textcolor{ColorOne}{$\circ$} Computational physics\\
+
+\vfill
+
+%----------------------------------------------------
+\section*{Education}
+	\begin{description}
+	\raggedright
+	\item [\normalfont \textcolor{ColorTwo}{2021 - Now}]
+    \textbf{Master in Quantum Engineering}\\
+	ETH Zürich\\
+	Zürich -- Switzerland
+
+	\item [\normalfont \textcolor{ColorTwo}{2018 - 2021}] \textbf{Bachelor in
+	Physics}\\
+	University of Trento\\
+	Trento -- Italy\\
+    \small{Graduated with 110/110 cum laude}
+    \normalsize
+
+	\item [\normalfont \textcolor{ColorTwo}{2013 - 2018}] \textbf{Secondary School}\\ 
+	Liceo Classico \textit{"G. Carducci"} \\
+	Bolzano -- Italy \\
+    \small{Concluded with 100/100 cum laude} \normalsize
+\end{description}
+
+\vfill
+\end{minipage}
+\end{adjustbox}
+%
+%
+%-------------------------------------------------------------------------------------------------------
+% Vertical rule
+%-------------------------------------------------------------------------------------------------------
+%
+\hfill
+\begin{adjustbox}{valign=t}
+\begin{minipage}{0.05\textwidth} % Adapt width to your convenience
+\MyVerticalRule  % See MySetup.tex file
+\end{minipage}
+\end{adjustbox}
+\hfill
+%
+%-------------------------------------------------------------------------------------------------------
+% Right column
+%-------------------------------------------------------------------------------------------------------
+\begin{adjustbox}{valign=t}
+\begin{minipage}{0.6\textwidth} % Adapt width to your convienience
+
+%----------------------------------------------------
+\section*{Working Experience}
+\begin{description}
+\raggedright
+\item[\normalfont \textcolor{ColorTwo}{Jul. 2021 -- Dec. 2021.}] 
+	\textbf{Technical consultant}\\
+	
+	\emph{Kerr Italy s.r.l.}\\
+	\small
+	Development of the front-end electronics for a single-photon detector.
+	\normalsize
+\item[\normalfont \textcolor{ColorTwo}{Feb. 2021 -- Jun. 2021}] 
+	\textbf{Physics Tutor}\\
+	
+	\emph{University of Trento}\\
+	\small 
+	Tutor for the Physics course at the department of Industrial Engineering
+    \normalsize
+\end{description}
+%----------------------------------------------------
+\section*{Technical Skills}
+\begin{description}
+\item \textbf{C/C++} --\small  Solid knowledge; used extensively for computational physics and algorithms. Ability of building and linking complex libraries. \normalsize
+\item \textbf{Python} --\small Very good knowledge; used extensively for scientific analysis and personal projects.\normalsize
+\item \textbf{Git} --\small Extensive and every-day use of Git for version control of personal and shared projects.\normalsize
+\item \textbf{CMake} -- \small Discrete skills in building structured project in C/C++. Used in scientific and personal projects.\normalsize
+\item \textbf{System Verilog, FPGA programming} -- \small Knowledge gained following the VLSI I course at ETH Zürich.\normalsize
+\item \LaTeX -- \small Very good knowledge, used extensively.\normalsize
+\item \textbf{Linux} -- \small Long-time Linux user.\normalsize
+\end{description}
+\small 
+Furthermore, I have a good knowledge of written and spoken English and a discrete knowledge of German.
+\normalsize
+%----------------------------------------------------
+\section*{Further Experiences}
+\begin{description}
+\raggedright
+\item[\normalfont \textcolor{ColorTwo}{March 2021}] 
+	\textbf{SWERC Competition}\\
+	\small
+	I participated in SWERC, the international university competition of competitive programming, as a student selected from the University of Trento.
+	\normalsize
+\item[\normalfont \textcolor{ColorTwo}{Nov 2020 - Jul 2021}] 
+	\textbf{Member of the Department Council}\\
+	
+	\emph{University of Trento}\\
+	\small 
+	I have been elected member of the Physics Department Council at Trento University, in representation of the physics students.
+    \normalsize
+\end{description}
+
+\MySkip
+\LastUpdate
+\end{minipage}
+\end{adjustbox}
 \end{document}
